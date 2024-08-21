@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+* {
+    font-family: 'Inter';
+    font-weight: 450;
+    font-size: 20px;  
+    margin: 0;
+    padding: 0;  
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    max-width: 100vw;
+    max-height: 100vh;
+    box-sizing: border-box;
+    background-color: rgb(226, 230, 234);
+
+}
+
+
+
+.main{
+    display: flex;
+    margin: 2% 2% 2% 8%;
+    height: 75dvh;
+    width: 90dvw;
+
+}
+
+.datos_contenedor{
+
+width: 75%;
+margin: 5%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.dato{
+
+    height: 75%;
+    border: 0;
+    text-align:justify;
+    resize: none;
+    background-color: rgb(226, 230, 234);
+    text-transform: lowercase;
+
+
+}
+
+
+
+
+.footer{
+    text-align: center;
+    background-color: aquamarine;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    height: 2rem;
+    align-content: center;
+}
+
+
+.botonEncriptar{
+    background: rgb(3, 3, 107);
+    border: 0.15rem solid rgb(3, 3, 107);
+    border-radius: 0.85rem;
+    font-size: 0.95rem;
+    color: white;
+    cursor: pointer;
+    height: 3rem;
+    width: 13rem;
+}
+
+.botonDesEncriptar{
+    background: rgb(185, 185, 222);
+    border: 0.15rem solid rgb(3, 3, 107);
+    border-radius: 0.85rem;
+    font-size: 0.95rem;
+    color: darkblue;
+    cursor: pointer;
+    height: 3rem;
+    width: 13rem;
+}
+
+
+.resultado{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background: white;
+    background-image: url("./assets/fondo.png");
+    background-repeat: no-repeat;
+    border: none;
+    background-position: top;
+    background-size: 85%;
+    width: 35%;
+    border-radius: 2.5rem;
+    justify-content: end;
+    text-align: left;
+ 
+
+
+    
+
+}
+
+.botones{
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+    gap: 2rem;
+}
+
+.mensajes{
+
+    width: 100%;
+
+
+
+}
+
+#copiar{
+
+    display: none;
+}
+

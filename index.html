@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="./assets/Vector.svg">
+    </header>
+    <main class="main">
+        <div class="datos_contenedor">
+            <textarea class="dato" onclick="clearText(this)" onblur="resetText(this)">Ingrese el texto aquí</textarea>
+                <p><img src="./assets/bi_exclamation-circle-fill.svg"> Solo letras minúsculas y sin acentos</p>
+                <br>
+            <div class="botones">
+                <button class="botonEncriptar" type="button" onclick="get_encriptar()">Encriptar</button>
+                <button class="botonDesEncriptar" type="button" onclick="get_desencriptar()">Desencriptar</button>                
+            </div>
+        </div>
+        <div class="resultado">
+            <div class="mensajes">
+               
+                <p class="resultado__p1">Ningún mensaje fue encontrado</p>
+                <br>
+                <p class="resultado__p2">Ingresa el texto que desees Encriptar o Desencriptar</p>
+                <br>
+            </div>
+            <div class="botones">
+                <button class="botonDesEncriptar" id="copiar" type="button" onclick="copiarTexto()">Copy</button>                    
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Hecho por Santiago Tadeo Del Pinal</p>
+        
+    </footer>
+   
+
+    <script src="encriptador.js"></script>
+</body>
+</html>
