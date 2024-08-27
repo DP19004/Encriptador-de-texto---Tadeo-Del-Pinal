@@ -1,3 +1,16 @@
+ var imagen = document.querySelector('.resultado')
+ var copiar = document.querySelector('#copiar');
+
+
+ function eliminarImagen(params) {
+    copiar.style.display = 'block';
+    imagen.style.backgroundImage  = 'none';
+    imagen.style.justifyContent = 'center';
+    imagen.style.alignItems = 'center'; 
+    imagen.style.padding = '1rem';
+ }
+
+
 function clearText(element) {
         element.value = '';
   
@@ -5,14 +18,15 @@ function clearText(element) {
 
 function resetText(element) {
     if (element.value === '') {
-        element.value = 'Ingrese el texto aquí';
+        element.value = 'ingrese el texto aquí';
     }
 }
 
 function get_encriptar() {
     let elements = document.querySelector('.dato').value.toLowerCase();
-    if(elements!="Ingrese el texto aquí")
+    if(elements!="ingrese el texto aquí")
     {
+        eliminarImagen();
         elements = encriptar(elements);
         document.querySelector(".resultado__p1").innerHTML='El mensaje ha sido encriptado con exito:<br> <br>';
         document.querySelector(".resultado__p2").innerHTML=elements;
@@ -22,9 +36,9 @@ function get_encriptar() {
 
 function get_desencriptar(){
     let elements = document.querySelector('.dato').value.toLowerCase();
-    if(elements!="Ingrese el texto aquí")
+    if(elements!="ingrese el texto aquí")
         {
-           
+            eliminarImagen();  
             elements = desencriptar(elements);
             document.querySelector(".resultado__p1").innerHTML='El mensaje ha sido desencriptado con exito:<br>';
             document.querySelector(".resultado__p2").innerHTML=elements;
@@ -51,16 +65,8 @@ function copiarTexto(params) {
         console.error('Error al copiar texto: ', err);
     });
 
-     try {
-        var retVal = document.execCommand("copy");
-        console.log('Copy to clipboard returns: ' + retVal);
-        alert("Copied the text: " + copyText.textContent); 
-    } catch (err) { console.log('Error while copying to clipboard: ' + err); }    
 }
-
-
 }
-
   
     
 
