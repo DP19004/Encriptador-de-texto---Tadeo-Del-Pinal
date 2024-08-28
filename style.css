@@ -131,3 +131,38 @@ justify-content: space-between;
     display:none;
 }
 
+.logo{
+
+    margin: 3%;
+}
+
+@media (max-width: 768px) {
+
+    .resultado{
+        background-image:none;
+
+    }
+    .main{
+
+        flex-direction: column;
+    }
+
+    .resultado
+    {
+        padding-top: 5%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dato{
+        height: 7rem;
+    }
+
+}
+
+@media (max-width: 375px) {
+
+    .botones{
+        flex-direction: column;
+    }
+}
